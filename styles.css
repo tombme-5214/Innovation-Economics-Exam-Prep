@@ -1,3 +1,6 @@
+/* =========================
+   CSS VARIABLES
+========================= */
 :root {
   --primary-color: #1b3b6f;
   --primary-dark: #274a82;
@@ -10,4 +13,278 @@
   --text-dark: #1e293b;
   --text-medium: #475569;
   --text-light: #64748b;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+/* =========================
+   HEADER
+========================= */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: calc(100vh - 64px);
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+  background: var(--secondary-color);
+  padding: 1rem;
+  border-right: 1px solid #e2e8f0;
+}
+
+.module-list {
+  list-style: none;
+  padding: 0;
+}
+
+.module-section h3 {
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0.75rem 0;
+  color: var(--primary-dark);
+}
+
+.lecture-list {
+  list-style: none;
+  padding-left: 0;
+  display: none;
+}
+
+.module-section.active .lecture-list {
+  display: block;
+}
+
+.lecture-btn {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem;
+  margin-bottom: 0.25rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-dark);
+  border-radius: 4px;
+}
+
+.lecture-btn:hover {
+  background: #e0e7ff;
+}
+
+.lecture-btn.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* =========================
+   CONTENT PANELS
+========================= */
+.content {
+  padding: 1.5rem;
+}
+
+.panel {
+  display: none;
+}
+
+.panel.visible {
+  display: block;
+}
+
+/* =========================
+   CARDS / GRIDS
+========================= */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: var(--bg-card);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* =========================
+   SUBSECTIONS
+========================= */
+.subsection {
+  margin-top: 2rem;
+}
+
+.subsection h2 {
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.25rem;
+}
+
+/* =========================
+   INTERACTIVE BLOCKS
+========================= */
+.interactive-block {
+  background: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* =========================
+   QUIZ
+========================= */
+.quiz-options {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.option-btn {
+  padding: 0.5rem;
+  border: 1px solid #cbd5f5;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.option-btn.correct {
+  background: #dcfce7;
+  border-color: var(--accent-color);
+}
+
+.option-btn.incorrect {
+  background: #fee2e2;
+  border-color: var(--danger-color);
+}
+
+/* =========================
+   FLASHCARDS
+========================= */
+.flashcards {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.flashcard {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5f5;
+  background: white;
+  cursor: pointer;
+}
+
+.flashcard.flipped {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* =========================
+   TABLE
+========================= */
+.scroll-table {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+th, td {
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+thead {
+  background: var(--secondary-color);
+}
+
+/* =========================
+   FEEDBACK
+========================= */
+.feedback {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.feedback.correct {
+  color: var(--accent-color);
+}
+
+.feedback.incorrect {
+  color: var(--danger-color);
+}
+
+/* =========================
+   TEXTAREA
+========================= */
+textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary-dark);
+  color: white;
 }
