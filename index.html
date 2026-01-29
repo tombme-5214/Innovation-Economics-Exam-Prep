@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECO1019 Innovation Economics – Learning Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">ECO1019</div>
+    <nav class="main-nav">
+      <a href="#overview">Overview</a>
+      <a href="#lectures">Lectures</a>
+      <a href="#resources">Resources</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <h2>📚 Module Structure</h2>
+      <ul class="module-list">
+        <li class="module-section active">
+          <h3>Foundations of Innovation Economics</h3>
+          <ul class="lecture-list">
+            <li><button class="lecture-btn active" data-target="lecture-1">Lecture 1: Introduction & Key Concepts</button></li>
+            <li><button class="lecture-btn" data-target="lecture-2">Lecture 2: IP & Knowledge Spillovers</button></li>
+            <li><button class="lecture-btn" data-target="lecture-3">Lecture 3: Measurement & Productivity</button></li>
+            <li><button class="lecture-btn" data-target="lecture-4">Lecture 4: Growth Models</button></li>
+          </ul>
+        </li>
+        <li class="module-section">
+          <h3>Geography & Systems</h3>
+          <ul class="lecture-list">
+            <li><button class="lecture-btn" data-target="lecture-5">Lecture 5: Geography (Guest)</button></li>
+            <li><button class="lecture-btn" data-target="lecture-8">Lecture 8: National Systems</button></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <section class="content">
+      <!-- Overview Panel -->
+      <section id="overview" class="panel visible">
+        <h1>🚀 ECO1019 – Innovation Economics</h1>
+        <p>Welcome to your interactive study platform for Spring 2026. Master the course through summaries, quizzes, flashcards, and exam prep tools.</p>
+
+        <div class="info-grid">
+          <div class="card">
+            <h3>📅 Course Info</h3>
+            <p><strong>Class:</strong> Tuesdays 4–6pm, GLA.QG21</p>
+            <p><strong>Lecturer:</strong> Dr. Dáire Crotty (daire.crotty@dcu.ie)</p>
+            <p><strong>Assessment:</strong> 50% Essay (Apr 10), 50% Exam (late Apr)</p>
+          </div>
+          <div class="card">
+            <h3>❓ Big Questions</h3>
+            <ul>
+              <li>What drives innovation?</li>
+              <li>How does IP influence innovation?</li>
+              <li>Best market structures for innovation?</li>
+              <li>Rich vs poor countries?</li>
+              <li>Good/bad regulation?</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- LECTURE 1: EXTENSIVE SUMMARY FOR EXAM STUDY -->
+      <section id="lecture-1" class="panel">
+        <h1>📖 Lecture 1 – Foundations of Innovation Economics</h1>
+
+        <section class="subsection">
+          <h2>🎯 Learning Objectives</h2>
+          <ul>
+            <li>Define economics of innovation (micro/macro/policy)</li>
+            <li>Explain why innovation drives >50% long-run growth (4 channels)</li>
+            <li>Distinguish invention/innovation/diffusion (Schumpeterian trilogy)</li>
+            <li>Summarise 8 key economists' contributions</li>
+            <li>Contrast neoclassical vs modern views</li>
+          </ul>
+        </section>
+
+        <section class="subsection">
+          <h2>1. Course Structure & Assessment</h2>
+          <p>8 lectures covering foundations → IP → measurement → growth models → geography → evolutionary dynamics → firms → national systems. 50% essay (Apr 10), 50% exam (essay questions, late Apr).</p>
+        </section>
+
+        <section class="subsection">
+          <h2>2. Why Innovation Matters</h2>
+          <p>Innovation explains >50% historical growth via: (1) enhanced physical capital; (2) labour complementarities; (3) human capital productivity; (4) endogenous investments. OECD: "science/tech/innovation drives long-term growth". Units: individuals/firms/industries/regions/countries.</p>
+
+          <div class="interactive-block">
+            <h3>Quick Quiz: Growth Channels</h3>
+            <p>Which is NOT a growth channel?</p>
+            <div class="quiz-options">
+              <button class="option-btn" data-correct="false">A. Better physical capital</button>
+              <button class="option-btn" data-correct="false">B. Labour productivity</button>
+              <button class="option-btn" data-correct="false">C. Human capital returns</button>
+              <button class="option-btn" data-correct="true">D. Permanent knowledge loss</button>
+            </div>
+            <p class="feedback" id="growth-feedback"></p>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <h2>3. Definitions (Oslo Manual + More)</h2>
+          <p><strong>Oslo Manual:</strong> (1) New product/change; (2) process new to industry; (3) new market; (4) new supply; (5) org changes. <strong>Types:</strong> Product/Process/Soft (org/strategic).</p>
+
+          <div class="interactive-block">
+            <h3>🔄 Flashcards: Trilogy</h3>
+            <div class="flashcards">
+              <button class="flashcard" data-term="invention">Invention</button>
+              <button class="flashcard" data-term="innovation">Innovation</button>
+              <button class="flashcard" data-term="diffusion">Diffusion</button>
+            </div>
+            <p class="feedback" id="flash-feedback">Click cards for definitions</p>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <h2>4. Key Economists (Exam Table)</h2>
+          <div class="scroll-table">
+            <table>
+              <thead>
+                <tr><th>Thinker</th><th>Key Idea</th><th>Notes</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Smith</td><td>Division of labour → inventions</td><td>Wealth of Nations</td></tr>
+                <tr><td>Ricardo</td><td>Machinery saves labour costs</td><td>Induced innovation</td></tr>
+                <tr><td>Mill</td><td>Fruits of originality; paradox</td><td>Distribution</td></tr>
+                <tr><td>Marx</td><td>Constant revolution of production</td><td>Competition</td></tr>
+                <tr><td>Marshall</td><td>Endless contriving (consumers too)</td><td>Dynamic wants</td></tr>
+                <tr><td>Veblen</td><td>Competitive distinction</td><td>Inverts necessity</td></tr>
+                <tr><td>Schumpeter</td><td>Creative destruction; 5 types</td><td>Mark I/II</td></tr>
+                <tr><td>Nelson/Winter</td><td>Break routines via learning</td><td>Evolutionary</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <h2>5. Neoclassical vs Modern + Process</h2>
+          <p>Neoclassical: exogenous "manna", codified knowledge. Modern: endogenous, non-linear process (invention→innovation→diffusion w/ spillovers). Scientists (public good) → firms (private R&D/IP).</p>
+
+          <div class="interactive-block">
+            <label>Reflection: Why endogenous growth?</label>
+            <textarea id="reflection" placeholder="Explain in 2 sentences..."></textarea>
+            <button id="save-reflect">💾 Save (Local)</button>
+            <p class="feedback" id="reflect-feedback"></p>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <h2>📝 Exam Prompts</h2>
+          <ul>
+            <li>Contrast neoclassical vs Schumpeterian tech change</li>
+            <li>List/explain Oslo + Schumpeter 5 types</li>
+            <li>4 growth channels + evidence</li>
+            <li>Nelson/Winter routines mechanism</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- Placeholder Lectures -->
+      <section id="lecture-2" class="panel"><h1>Lecture 2 Content Coming Soon</h1></section>
+      <section id="lecture-3" class="panel"><h1>Lecture 3 Content Coming Soon</h1></section>
+      <section id="lecture-4" class="panel"><h1>Lecture 4 Content Coming Soon</h1></section>
+      <section id="lecture-5" class="panel"><h1>Lecture 5 Content Coming Soon</h1></section>
+      <section id="lecture-8" class="panel"><h1>Lecture 8 Content Coming Soon</h1></section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>ECO1019 Innovation Economics – Spring 2026 | Dr. Dáire Crotty</p>
+  </footer>
+
+  <script>
+    // Navigation & Panels
+    const lectureBtns = document.querySelectorAll('.lecture-btn');
+    const panels = document.querySelectorAll('.panel');
+    const navLinks = document.querySelectorAll('.main-nav a');
+    const moduleSections = document.querySelectorAll('.module-section');
+
+    function showPanel(targetId) {
+      panels.forEach(p => p.classList.remove('visible'));
+      document.getElementById(targetId)?.classList.add('visible');
+    }
+
+    lectureBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        lectureBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        showPanel(btn.dataset.target);
+      });
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const id = link.getAttribute('href').slice(1);
+        showPanel(id);
+      });
+    });
+
+    // Module expand/collapse
+    moduleSections.forEach(section => {
+      section.querySelector('h3').addEventListener('click', () => {
+        section.classList.toggle('active');
+      });
+    });
+
+    // Quiz
+    document.querySelectorAll('.option-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const correct = btn.dataset.correct === 'true';
+        const feedback = document.getElementById('growth-feedback');
+        btn.classList.add(correct ? 'correct' : 'incorrect');
+        feedback.textContent = correct 
+          ? '✅ Correct! Innovation expands knowledge.' 
+          : '❌ No, innovation creates/expands knowledge.';
+        feedback.className = `feedback ${correct ? 'correct' : 'incorrect'}`;
+      });
+    });
+
+    // Flashcards
+    const flashcards = document.querySelectorAll('.flashcard');
+    const flashFeedback = document.getElementById('flash-feedback');
+    const definitions = {
+      invention: 'Creation of new idea (profit unverified); needs development.',
+      innovation: 'Commercial exploitation of invention/new ideas.',
+      diffusion: 'Spread to users/society; generates spillovers.'
+    };
+
+    flashcards.forEach(card => {
+      card.addEventListener('click', () => {
+        const term = card.dataset.term;
+        flashFeedback.textContent = definitions[term];
+        flashcards.forEach(c => c.classList.remove('flipped'));
+        card.classList.add('flipped');
+      });
+    });
+
+    // Reflection
+    const reflectBox = document.getElementById('reflection');
+    const saveBtn = document.getElementById('save-reflect');
+    const reflectFeedback = document.getElementById('reflect-feedback');
+    const KEY = 'eco1019-l1-reflection';
+
+    if (localStorage.getItem(KEY)) {
+      reflectBox.value = localStorage.getItem(KEY);
+    }
+
+    saveBtn.addEventListener('click', () => {
+      localStorage.setItem(KEY, reflectBox.value);
+      reflectFeedback.textContent = '💾 Saved locally!';
+      reflectFeedback.className = 'feedback correct';
+    });
+  </script>
+</body>
+</html>
